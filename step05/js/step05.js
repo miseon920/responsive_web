@@ -8,18 +8,20 @@ $(function () {
   $(".mbtn").click(function () {
     $(".gnb").toggleClass("on");
   });
-  const gnb_a = $("#header.on .gnb > ul > li a");
+  const gnb_a = $(".gnb > ul > li> a");
   const w_w = $(window).width();
   $(gnb_a).click(function () {
-    $(this)
-      .siblings(".smenu")
-      .stop()
-      .slideToggle()
-      .closest("li")
-      .siblings()
-      .find(".smenu")
-      .slideUp();
-    return false;
+    if ($("header").hasClass("on") == true) {
+      $(this)
+        .siblings(".smenu")
+        .stop()
+        .slideToggle()
+        .closest("li")
+        .siblings()
+        .find(".smenu")
+        .slideUp();
+      return false;
+    }
   });
   mob();
   $(window).resize(function () {
