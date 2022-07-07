@@ -1,0 +1,82 @@
+@charset "utf-8";
+html {
+  font-size: 20px;
+}
+body {
+  font-size: 0.8rem;
+}
+.header {
+  position: relative;
+  height: 100px;
+  line-height: 100px;
+}
+.header .container {
+  position: absolute;
+  top: 0;
+  left: 80px;
+  right: 80px;
+}
+.header .container > * {
+  float: left;
+}
+.header h1 {
+  width: 20%;
+}
+.header h1 a {
+  display: block;
+}
+.header nav {
+  width: 60%;
+}
+.header nav ul {
+  text-align: center;
+  font-size: 0;
+}
+.header .sns {
+  text-align: right;
+}
+.header nav ul li,
+.header .sns ul li {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.header nav ul li a {
+  display: block;
+  padding: 0 15px;
+  font-size: 20px;
+}
+.header .sns {
+  width: 20%;
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.float02 {
+  padding: 100px 0;
+  background: #f1f1f1;
+}
+.float02 .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.float02 .container .des {
+  float: right;
+}
+.float02 .container figure {
+  float: left;
+}
+.float02 .container > * {
+  width: 50%;
+}
+
+@media (max-width: 767px) {
+  .float02 .container > * {
+    float: none;
+    width: 100%;
+  }
+}

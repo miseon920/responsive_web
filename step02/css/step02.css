@@ -1,0 +1,75 @@
+@charset "utf-8";
+html {
+  font-size: 20px;
+}
+body {
+  font-size: 0.8rem;
+}
+.container {
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+header {
+  line-height: 100px;
+}
+header h1 {
+  float: left;
+}
+header .mopen {
+  float: right;
+}
+header nav {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  background: #f1f1f1;
+  padding: 15px;
+  transition: 0.5s;
+}
+header nav li {
+  padding-bottom: 10px;
+}
+header nav li:last-child {
+  padding-bottom: 0;
+}
+header nav li a {
+  display: block;
+  text-align: center;
+}
+header nav.on {
+  left: 0;
+}
+header nav ul li {
+  line-height: 1;
+}
+.step02 {
+  padding: 100px 0;
+  text-align: center;
+}
+.step02 h2 {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.step02 p {
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.step02 .container > div {
+  margin: 0 -15px;
+}
+.step02 .container figure {
+  float: left;
+  width: 33.33%;
+  padding: 0 15px;
+}
