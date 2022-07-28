@@ -1,11 +1,9 @@
 $(function () {
+  $(".TopBanner i").on("click", function () {
+    $(".TopBanner").hide();
+  });
 
-    $('.TopBanner i').on('click', function () {
-        $('.TopBanner').hide();
-    });
-
-    $('.pop buhui turn').on('click', function () {
-        $(this).parent().hide();
-    })
-
-})
+  $(".pop button").on("click", function () {
+    $(this).parent().hide();
+  });
+});

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sticky 01</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .sc {
+        height: 100vh;
+      }
+      .sc01 {
+        background: red;
+        top: 0;
+        position: sticky;
+      }
+      .sc02 {
+        background: pink;
+      }
+      .sticky {
+        position: sticky;
+        top: 0;
+        width: 400px;
+        height: 500px;
+        background: #fff;
+      }
+      .sc03 {
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="sc sc01"></section>
+    <section class="sc sc02">
+      <div class="sticky">스띠키 할곳</div>
+    </section>
+    <section class="sc sc03"></section>
+  </body>
+</html>
