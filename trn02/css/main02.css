@@ -1,0 +1,615 @@
+@charset "utf-8";
+
+/* 
+h5{
+    display: flex;
+    align-items: center;
+}
+
+h5::after{
+    content: '';
+    display: block;
+    flex: 1;
+    height: 1px;
+    background: #f00;
+    margin-left: 30px;
+}
+
+
+h6{
+    display: flex;
+    align-items: center;
+}
+h6::before{
+    content: '';
+    display: block;
+    flex: 1;
+    height: 1px;
+    background: #f00;
+    margin-right: 30px;
+}
+
+h6::after{
+    content: '';
+    display: block;
+    flex: 1;
+    height: 1px;
+    background: #f00;
+    margin-left: 30px;
+} */
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  letter-spacing: -0.025em;
+}
+
+.container {
+  display: flex;
+  max-width: calc(120rem + 3rem);
+  width: 100%;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+}
+.mc {
+  color: #008850;
+}
+.btn {
+  display: inline-block;
+  border: 1px solid #008850;
+  padding: 10px 20px;
+  color: #008850;
+  font-size: 1.2rem;
+}
+.btn i {
+  font-size: 0.8rem;
+  margin-left: 1rem;
+}
+.sec {
+  padding: 10rem 0;
+}
+.sec h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 0 1.5rem;
+}
+.sec p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 0 1.5rem;
+}
+.TopBanner {
+  background: #f8f8f8;
+  padding: 3rem 0 3rem 0;
+}
+.TopBanner.on {
+  display: none;
+}
+
+.TopBanner .container {
+  position: relative;
+  display: block;
+}
+
+.TopBanner h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+.TopBanner p {
+  font-size: 1.3rem;
+}
+
+.TopBanner a {
+  display: inline-block;
+  border: 1px solid #333;
+  padding: 2px 2rem 5px 2rem;
+  transform: translateY(-2px);
+  margin: 0 0 0 2rem;
+}
+
+.TopBanner i {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.Header {
+  line-height: 10rem;
+}
+
+.Header h1 {
+  font-size: 0;
+}
+
+.Gnb {
+  margin: 0 0 0 auto;
+}
+
+.Gnb a {
+  display: block;
+}
+
+.Gnb a::first-letter {
+  color: #f00;
+}
+
+.Gnb > ul {
+  display: flex;
+  gap: 3rem;
+}
+
+.Gnb > ul > li {
+  position: relative;
+}
+
+.Gnb > ul > li ~ li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -1.5rem;
+  width: 1px;
+  height: 1.2rem;
+  background: #ddd;
+  transform: translateY(-50%);
+}
+
+#searchForm {
+  margin: 0 0 0 4rem;
+}
+
+#searchForm input[name="search"] {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #333;
+}
+
+#searchForm input[name="search"] {
+  color: #f00;
+}
+
+#searchForm input[name="search"]::placeholder {
+  color: #ddd;
+}
+
+#searchForm input[name="search"]:focus::placeholder {
+  color: transparent;
+}
+
+#searchForm button {
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: 2rem;
+}
+
+.MainVisual .sligan h2 {
+  font-size: 5rem;
+  font-weight: 900;
+  text-shadow: 0 0 3px #000;
+  margin: 0 0 1.2rem 0;
+  text-indent: -2px;
+}
+
+.MainVisual .sligan p {
+  font-size: 1.5rem;
+  text-shadow: 0 0 3px #000;
+}
+
+.MainSlider .slick-dots {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.MainSlider .slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 4rem;
+  height: 0.4rem;
+  background: #333;
+  border-radius: 0.2rem;
+  margin: 0 0.2rem;
+  overflow: hidden;
+}
+.MainContent {
+  text-align: center;
+}
+.MainContent .box {
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+.MainContent .box img {
+  transition: 0.5s all;
+}
+.MainContent .box:hover img {
+  transform: scale(1.2);
+}
+.MainContent .tit {
+  font-size: 2.1rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+  position: relative;
+}
+.MainContent .tit::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 0;
+  width: 2px;
+  height: 30px;
+  background: #008850;
+  margin-top: -6rem;
+}
+.MainContent .dec {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+}
+.Product {
+  /* background: #008850; */
+  background: linear-gradient(#008850 50%, transparent 50%);
+  /*반만들어가는 배경만듬!*/
+  color: #fff;
+  text-align: center;
+}
+.Product .ProductSlider {
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+}
+.Product .ProductSlider figure {
+  padding: 0 1.5rem;
+}
+.Product .ProductSlider figure img {
+  margin-bottom: 3rem;
+}
+.Product .ProductSlider figure .dec {
+  font-size: 1.5rem;
+  color: #000;
+}
+/* .Product .ProductSlider .slick-track {
+  margin: 0 -1.5rem;
+} */
+.Footer .top {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  line-height: 7rem;
+  position: relative;
+}
+.Footer .container {
+  justify-content: space-between;
+}
+.Footer .top ul li {
+  line-height: normal;
+  display: inline-block;
+}
+.Footer .top .customer li::after {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: #ddd;
+  vertical-align: 2px;
+  margin: 0 15px;
+}
+.Footer .top .customer li:last-child::after {
+  display: none;
+}
+.Footer .top .customer li:last-child span {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 2rem;
+}
+.pop li::after {
+  content: "+";
+  display: inline-block;
+  color: #008850;
+  margin-left: 15px;
+  vertical-align: -1px;
+  font-size: 2rem;
+}
+.pop li.on::after {
+  content: "-";
+}
+.Footer .bottom {
+  padding: 3rem 0;
+  line-height: 1.25;
+}
+.Footer address {
+  font-style: normal;
+}
+.Footer .sns li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.Footer .sns li:last-child {
+  margin-right: 0;
+}
+.Footer .sns li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  background: #008850;
+}
+.popup {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translateX(-50%);
+  background: #f7f7f7;
+  padding: 1rem 2rem;
+  border: 1px solid #ddd;
+  display: none;
+}
+.popup.on {
+  display: flex;
+}
+.popup i {
+  align-self: center;
+}
+.mopen {
+  display: none;
+}
+.slick-dots {
+  padding-top: 1.5rem;
+}
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.slick-dots li button {
+  border: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #008850;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.search_bt,
+.sclose_bt {
+  display: none;
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .TopBanner .container {
+    position: static;
+  }
+  .TopBanner {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1.5rem;
+    right: 1.5rem;
+    z-index: 1;
+    padding: 2rem;
+  }
+  .TopBanner p {
+    display: flex;
+    flex-direction: column;
+  }
+  .TopBanner a {
+    align-self: flex-start;
+    margin: 2rem 0 0 0;
+  }
+  .TopBanner i {
+    padding: 5px;
+    background: #333;
+    color: #fff;
+  }
+  .Header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    line-height: 6rem;
+  }
+  .sec {
+    padding-bottom: 6rem;
+  }
+  .Header h1 {
+    position: relative;
+    z-index: 3;
+  }
+  .Gnb {
+    margin-left: 0;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: calc(100% - 90px);
+    height: 100vh;
+    background: #fff;
+    border-right: 1px solid #ddd;
+    z-index: 2;
+    padding: 10rem 1.5rem 0 1.5rem;
+    transition: 0.5s all;
+  }
+  .Gnb.on {
+    left: 0;
+  }
+  .Gnb > ul {
+    flex-direction: column;
+    line-height: 2;
+    gap: 0;
+  }
+  .Gnb > ul > li {
+    border-bottom: 1px solid #ddd;
+  }
+  .Gnb > ul > li ~ li::before {
+    display: none;
+  }
+  .mopen {
+    display: block;
+    font-size: 0;
+    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 0;
+    outline: 0;
+    position: relative;
+    background: #ddd;
+    /* overflow: hidden; */
+    /* z-index: 3; */
+  }
+  .mopen button {
+    background: none;
+    border: 0;
+  }
+  .mopen button::before,
+  .mopen button::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    height: 2px;
+    background: #333;
+    transition: 0.5s all;
+  }
+  .mopen button::before {
+    top: 7px;
+  }
+  .mopen button::after {
+    bottom: 7px;
+  }
+  .mopen::before,
+  .mopen::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    height: 2px;
+    background: #333;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s all;
+  }
+  .mopen.on button::before {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  .mopen.on button::after {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  .mopen.on::before {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  .mopen.on::after {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  #searchForm {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    width: calc(100% - 3rem);
+    background: #fff;
+    padding: 30px 0;
+    z-index: 5;
+  }
+  #searchForm.on {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+  section .container {
+    gap: 30px;
+  }
+  section img {
+    width: 100%;
+  }
+  .Footer {
+    text-align: center;
+  }
+  .Footer .top {
+    line-height: normal;
+  }
+  .Footer .top ul li a,
+  .Footer address {
+    font-size: 1.3rem;
+  }
+  .Footer .top .customer li:last-child span,
+  .Footer .top .customer li::after {
+    display: none;
+  }
+  .popup.container {
+    flex-direction: row;
+  }
+  .Footer .sns {
+    padding-top: 1.5rem;
+  }
+  .search_bt {
+    display: block;
+    margin-left: auto;
+    margin-right: 15px;
+  }
+  .search_bt i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+  }
+  .sclose_bt {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+  }
+  .sclose_bt i {
+    padding: 5px;
+    background: #333;
+    color: #fff;
+  }
+  .Wrapper::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    /* z-index: 2; */
+  }
+  .Wrapper.on::after {
+    display: block;
+    /* z-index: 1; */
+  }
+}
